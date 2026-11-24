@@ -1,0 +1,32 @@
+# SPDX-License-Identifier: Apache-2.0
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "theama-app"
+version = "0.1.0"
+description = "Web app + API layer for Theama (Film / Avatar / Image generation lines)"
+readme = "README.md"
+license = { text = "Apache-2.0" }
+authors = [{ name = "Chien-Hsin Lin" }]
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.115",
+    "uvicorn[standard]>=0.30",
+    "pydantic>=2.7",
+    "pyyaml",
+]
+
+[project.optional-dependencies]
+engine = ["theama"]        # the model package, github.com/tonythetiger168/theama
+dev = ["pytest", "httpx"]
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+theama_app = ["static/*"]
+
+[tool.ruff]
+line-length = 100

@@ -1,0 +1,8 @@
+Theama App
+Copyright 2026 Chien-Hsin Lin
+
+Licensed under the Apache License, Version 2.0 (see LICENSE).
+
+Companion application layer for the Theama model stack
+(https://github.com/tonythetiger168/theama). Model weights are downloaded
+separately by the user and are NOT redistributed here.
